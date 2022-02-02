@@ -1,6 +1,6 @@
 load("@bazel_gazelle//:def.bzl", "gazelle")
 
-# gazelle:prefix github.com/ahmadfajarm92/bazel-sample
+# gazelle:prefix github.com/ahmadfajar92/bazel-sample
 
 gazelle(name = "gazelle")
 
@@ -8,13 +8,14 @@ load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
 
 go_binary(
     name = "hello",
-    embed = [":go_default_library"],
+    embed = [":bazel-sample_lib"],
     visibility = ["//visibility:public"],
 )
 
 go_library(
-    name = "go_default_library",
+    name = "bazel-sample_lib",
     srcs = ["main.go"],
-    importpath = "github.com/ahmadfajarm92/bazel-sample",
+    importpath = "github.com/ahmadfajar92/bazel-sample",
     visibility = ["//visibility:private"],
+    deps = ["//shared"],
 )

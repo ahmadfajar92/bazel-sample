@@ -2,6 +2,6 @@ load("@bazel_gazelle//:def.bzl", "gazelle")
 
 # gazelle: exclude build
 
-# gazelle:prefix github.com/ahmadfajarm92/bazel-sample
+# gazelle:prefix github.com/ahmadfajar92/bazel-sample
 
 gazelle(name = "gazelle")

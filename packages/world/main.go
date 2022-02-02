@@ -1,7 +1,7 @@
 package main
 
 import (
-	shared "bazel-sample/shared"
+	shared "github.com/ahmadfajar92/bazel-sample/shared"
 )
 
 func main() {

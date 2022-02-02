@@ -1,11 +1,8 @@
-load("@io_bazel_rules_go://go:def.bzl", "go_library")
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
 
 go_library(
-    name = "go_default_library",
-    src = [
-        "strings.go",
-    ],
+    name = "shared",
     srcs = ["strings.go"],
-    importpath = "github.com/ahmadfajarm92/bazel-sample/shared",
+    importpath = "github.com/ahmadfajar92/bazel-sample/shared",
     visibility = ["//visibility:public"],
 )
